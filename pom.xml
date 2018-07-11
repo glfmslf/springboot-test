@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+<!--spring boot 学习-->
+    <groupId>com.yy</groupId>
+    <artifactId>springboot-test</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <!--spring boot 从1.5.13后不支持自动配置dubbo，需要自己手动将dubbo的相关实例配置-->
+        <!--dubbo提供者-->
+        <module>dubbo-provider</module>
+        <!--dubbo消费者-->
+        <module>dubbo-consumer</module>
+        <!--dubbo接口包-->
+        <module>commonface</module>
+        <!--dubbo 实体类-->
+        <module>domain</module>
+    </modules>
+
+
+</project>
