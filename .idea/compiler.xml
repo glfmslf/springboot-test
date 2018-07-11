@@ -10,7 +10,7 @@
         <module name="domain" />
         <module name="dubbo-consumer" />
         <module name="dubbo-provider" />
-        <module name="springboottest" />
+        <module name="springbootlearning" />
       </profile>
     </annotationProcessing>
   </component>
