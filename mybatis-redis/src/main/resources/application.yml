@@ -1,0 +1,34 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+spring:
+  redis:
+    host: localhost
+    port: 6379
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+    database: 0
+    timeout: 30000ms
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: hsz6NEF0+jS4Z4TE9P2f1bCJ1/Y3YS4dNaQcFtrg3wPO28u8Tw1SknK5Jf5C7PbWyTa193DcL9/fGCn9SMH3fw==
+    druid:
+      connection-properties: config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJ/cF1gfTK/vdp3CnWP3JD1F0zU3bTWy3BINoDj+ZyzvE2KO61Sbzt7okeGN5TiFnq44hs2xtUXHN+jxz44Scv8CAwEAAQ==
+      initial-size: 1
+      max-active: 8
+      max-wait: 8000
+      min-idle: 1
+      filters: config
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis:
+  mapper-locations: classpath:mapper/UserMapping.xml
+  config-location: classpath:mybatis-config.xml
+  type-aliases-package: com.yy.mybatisredis.pojo
+
+

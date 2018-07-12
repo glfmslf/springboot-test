@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yy.mybatisredis.mapper.UserMapper">
+    <cache type="com.yy.mybatisredis.conf.MybatisRedisCache"/>
+    <select id="getUserById" resultType="User" parameterType="java.lang.Integer">
+        select id,userName,phoneNo,password from user where id = #{id}
+    </select>
+    <insert id="insertUser" parameterType="User">
+        insert into user(userName, phoneNo, password) values (#{userName}, #{phoneNo}, #{password})
+    </insert>
+</mapper>
