@@ -18,6 +18,8 @@
         <module>commonface</module>
         <!--dubbo 实体类-->
         <module>domain</module>
+        <!--reids 实现mybatis的二级缓存-->
+        <module>mybatis-redis</module>
     </modules>
 
 
