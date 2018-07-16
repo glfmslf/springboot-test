@@ -24,6 +24,8 @@
         <module>eureka-server</module>
         <!--服务提供者-->
         <module>erureka</module>
+        <!--使用ribbon达到多个服务负载均衡的效果-->
+        <module>server-ribbon</module>
     </modules>
 
 

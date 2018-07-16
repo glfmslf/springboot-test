@@ -1,7 +1,6 @@
 package com.yy.erureka;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,9 +13,11 @@ public class HelloEureka {
 
     @Value("${spring.application.name}")
     private String applicationName;
+    @Value("${server.port}")
+    private String port;
 
-    @RequestMapping("helloEureka/{name}")
-    public String helloEureka(@PathVariable String name){
-        return name + " : " + applicationName;
+    @RequestMapping("/helloEureka")
+    public String helloEureka(String name){
+        return name + " : " + applicationName + port;
     }
 }
