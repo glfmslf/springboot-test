@@ -20,6 +20,10 @@
         <module>domain</module>
         <!--reids 实现mybatis的二级缓存-->
         <module>mybatis-redis</module>
+        <!--eureka注册中心-->
+        <module>eureka-server</module>
+        <!--服务提供者-->
+        <module>erureka</module>
     </modules>
 
 

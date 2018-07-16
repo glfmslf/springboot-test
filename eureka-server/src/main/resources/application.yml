@@ -1,0 +1,25 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: eureka-server
+eureka:
+  instance:
+    hostname: localhost
+    metadata-map:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client: 
+    service-url:
+#    浏览器输入 http://localhost:8081 可以看到eureka的dashboard
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+#     如下配置false,表示不注册自己
+#    register-with-eureka: false
+#     是否检索服务
+#    fetch-registry: false
+#    指定注册中心的位置
+#    实现eureka的高可用性，就是将eurekaserver作为服务向其他服务中心注册自己，
+#    例：有上面部分作为master，另有一个backup,则可以将master的server注册到把backup中，
+#    即可实现集群模式
+#    service-url:
+#      defaultZone: http://${eureka.instance.backuphostname}:${server.port}/eureka/
