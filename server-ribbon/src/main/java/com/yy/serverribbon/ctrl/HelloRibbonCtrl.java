@@ -2,6 +2,7 @@ package com.yy.serverribbon.ctrl;
 
 import com.yy.serverribbon.service.HelloRibbon;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +16,9 @@ public class HelloRibbonCtrl {
 
     @Autowired
     private HelloRibbon helloRibbon;
+
+    @Autowired
+    private LoadBalancerClient loadBalancerClient;
 
     @RequestMapping(value = "/helloRibbon")
     public String helloRibbon(@RequestParam(value = "name") String name){
