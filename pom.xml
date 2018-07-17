@@ -26,6 +26,8 @@
         <module>erureka</module>
         <!--使用ribbon达到多个服务负载均衡的效果-->
         <module>server-ribbon</module>
+        <!--feign客户端-->
+        <module>feign</module>
     </modules>
 
 

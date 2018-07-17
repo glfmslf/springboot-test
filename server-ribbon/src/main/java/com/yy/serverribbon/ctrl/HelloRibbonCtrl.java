@@ -3,6 +3,7 @@ package com.yy.serverribbon.ctrl;
 import com.yy.serverribbon.service.HelloRibbon;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -15,8 +16,8 @@ public class HelloRibbonCtrl {
     @Autowired
     private HelloRibbon helloRibbon;
 
-    @RequestMapping("/helloRibbon")
-    public String helloRibbon(String name){
+    @RequestMapping(value = "/helloRibbon")
+    public String helloRibbon(@RequestParam(value = "name") String name){
         return helloRibbon.helloRibbon(name);
     }
 }
