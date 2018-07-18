@@ -6,5 +6,5 @@ package com.yy.serverribbon.conf;
  */
 //@Configuration
 //@RibbonClient(name = "test",configuration = BeanConfig.class)
-//public class ConfigurationRibbon {
+//public class ConfPropertiesFactoryigurationRibbon {
 //}

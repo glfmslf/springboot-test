@@ -28,6 +28,9 @@
         <module>server-ribbon</module>
         <!--feign客户端-->
         <module>feign</module>
+        <!--ribbon 中实现hystrix 需要添加hystrix依赖-->
+        <module>hystrix-ribbon</module>
+        <!--feign 中实现hystrix feign中包括了hystrix，默认关闭，需要再yml配置文件中打开-->
     </modules>
 
 
