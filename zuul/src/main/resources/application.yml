@@ -1,0 +1,27 @@
+server:
+  port: 8088
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8080/eureka
+spring:
+  application:
+    name: server-zuul
+zuul:
+  routes:
+#  api-a \u6CA1\u6709\u56FA\u5B9A\u8981\u6C42\uFF0C\u552F\u4E00\u5373\u53EF
+    api-a:
+#    \u5C06\u8BF7\u6C42hystrix-ribbon\u7684\u8BF7\u6C42\u6620\u5C04\u4E3A/api-a/**   *\u4E3A\u4E00\u5C42\u76EE\u5F55\uFF0C**\u4E3A\u591A\u5C42\u76EE\u5F55
+      path: /api-a/**
+      serviceId: hystrix-ribbon
+    api-b:
+      path: /api-b/**
+      serviceId: hystrix-feign
+  host:
+#  \u8FDE\u63A5\u8D85\u65F6
+    connect-timeout-millis: 60000
+#    \u901A\u4FE1\u8D85\u65F6
+    socket-timeout-millis: 60000
+ribbon:
+  eureka:
+    enable: false
