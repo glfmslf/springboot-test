@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: configclient
+  cloud:
+    config:
+      label: master
+      profile: test
+      uri: http://localhost:8090
+server:
+  port: 8091
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8080/eureka

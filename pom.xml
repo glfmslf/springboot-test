@@ -34,6 +34,10 @@
         <module>hystrix-feign</module>
         <!--zuul路由-->
         <module>zuul</module>
+        <!--分布式配置中心服务端 springcloud config-->
+        <module>server-config</module>
+        <!--分布式配置中心客户端 springcloud config-->
+        <module>client-config</module>
     </modules>
 
 

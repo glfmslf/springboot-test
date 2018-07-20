@@ -1,0 +1,18 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: serverconfig
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/glfmslf/cloud-config/
+          search-paths: config
+          username:
+          password:
+      label: master
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8080/eureka
