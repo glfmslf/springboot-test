@@ -38,6 +38,9 @@
         <module>server-config</module>
         <!--分布式配置中心客户端 springcloud config-->
         <module>client-config</module>
+        <!--zipkin追踪组件-->
+        <module>zipkin1</module>
+        <module>zipkin2</module>
     </modules>
 
 
