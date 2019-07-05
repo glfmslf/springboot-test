@@ -6,11 +6,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="commonface" />
+        <module name="client-config" />
+        <module name="common-face" />
         <module name="domain" />
         <module name="dubbo-consumer" />
         <module name="dubbo-provider" />
-        <module name="springbootlearning" />
+        <module name="erureka" />
+        <module name="eureka-server" />
+        <module name="feign" />
+        <module name="hystrix-feign" />
+        <module name="hystrix-ribbon" />
+        <module name="mybatis-redis" />
+        <module name="server-config" />
+        <module name="server-ribbon" />
+        <module name="springboot-test" />
+        <module name="zipkin1" />
+        <module name="zipkin2" />
+        <module name="zuul" />
       </profile>
     </annotationProcessing>
   </component>
