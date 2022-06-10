@@ -23,7 +23,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <spring-boot-starter-dubbo-version>1.0.0</spring-boot-starter-dubbo-version>
-        <dubbo-version>2.6.2</dubbo-version>
+        <dubbo-version>2.6.12</dubbo-version>
         <curator-version>4.0.0</curator-version>
     </properties>
 
